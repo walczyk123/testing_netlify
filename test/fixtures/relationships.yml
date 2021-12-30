@@ -1,0 +1,15 @@
+one:
+  follower: testowy
+  followed: gib
+
+two:
+  follower: testowy
+  followed: bigboy
+
+three:
+  follower: badboy
+  followed: testowy
+
+four:
+  follower: bigboy
+  followed: testowy

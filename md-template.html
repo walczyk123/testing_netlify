@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MVC</title>
+</head>
+<body>
+
+    <div class="mermaid">
+      graph LR
+      M(Model) -- users --> V[Viever]
+      V -- HTML --> M
+      V -- user.all --> C{Controller}
+      C -->V
+      C --> D((Database))
+      D --> C
+    </div>
+    <script>
+        var config = {
+            startOnLoad:true,
+            flowchart:{
+                htmlLabels:false
+            }
+        };
+        mermaid.initialize(config);
+    </script>
+</body>
+</html>

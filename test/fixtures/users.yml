@@ -1,0 +1,51 @@
+testowy:
+  name: "testertestow"
+  email: "tester@tester.omg"
+  password_digest: <%= User.digest("password") %>
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+badboy:
+  name: "bad boy"
+  email: "bad@boy.org"
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+smollboy:
+  name: "kinda small"
+  email: "small@boy.com"
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+bigboy:
+  name: "kinda big"
+  email: "big@boy.com"
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+gib:
+  name: "gibbi"
+  email: "gibbig@boy.com"
+  password_digest: <%= User.digest("password") %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+inactiveboy:
+  name: "kinda big"
+  email: "inactiv@boy.com"
+  password_digest: <%= User.digest("password") %>
+
+
+# Important in YML file: indent line 3,4,5, line 1,2,6 no indent.
+<% 30.times do |n| %>
+user_<%= n %>:
+  name: <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+<% end %>

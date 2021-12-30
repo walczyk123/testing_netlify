@@ -1,0 +1,27 @@
+<% provide(:title, 'Log in') %>
+<h1> Log in </h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(url: login_path, scope: :session, local: true) do |iter| %>
+      <%= iter.label :email %>
+      <%= iter.email_field :email, class: 'form-control' %>
+
+      <%= iter.label :password %>
+      <%= link_to "Forgot password?", new_password_reset_path %>
+      <%= iter.password_field :password, class: 'form-control' %>
+
+      <%= iter.label :remember_me, class: 'checkbox inline' do %>
+        <%= iter.check_box :remember_me %>
+        <span class="remember-text">Remember me on this device</span>
+      <% end %>
+
+      <%= iter.submit "Log in in my super site", class: "btn btn-success" %>
+    <% end %>
+    <p>
+      If you are new to my inn, please sign up for my customer book >
+      <%= link_to "Sign up", signup_path%>
+    </p>
+  </div>
+
+</div>

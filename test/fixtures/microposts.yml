@@ -1,0 +1,42 @@
+cat:
+  content: "my cat is brown"
+  created_at: <%= 10.minutes.ago %>
+  user: testowy
+
+dog:
+  content: "my dog is green"
+  created_at: <%= 3.years.ago %>
+  user: testowy
+
+car:
+  content: "my car is silver"
+  created_at: <%= 2.hours.ago %>
+  user: testowy
+
+wine:
+  content: "my wine is good"
+  created_at: <%= Time.zone.now %>
+  user: testowy
+
+mine:
+  content: "Mine in the mine"
+  created_at: <%= 3.days.ago %>
+  user: badboy
+
+dine:
+  content: "sine and cosine"
+  created_at: <%= 2.years.ago %>
+  user: badboy
+
+game:
+  content: "Game of the year edition"
+  created_at: <%= 10.minutes.ago %>
+  user: smollboy
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(word_count: 5) %>
+  created_at: <%= 42.days.ago %>
+  user: testowy
+<% end %>
+

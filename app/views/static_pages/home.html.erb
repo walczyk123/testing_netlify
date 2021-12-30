@@ -1,0 +1,7 @@
+<% provide(:title, "Home") %>
+
+<% if logged_in? %>
+  <%= render "static_pages/login_true" %>
+<% else %>
+  <%= render "static_pages/login_false" %>
+<% end %>
